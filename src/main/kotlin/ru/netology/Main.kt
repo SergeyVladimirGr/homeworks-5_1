@@ -13,7 +13,7 @@ fun main() {
         views = Views()
     )
     val post1 = Post(
-        id = 6,
+        id = 3,
         comments = Comments(),
         copyright = Copyright(),
         donut = Donut(),
@@ -22,9 +22,12 @@ fun main() {
         views = Views()
     )
 
-    WallService.add(post)
-    WallService.add(post)
-    WallService.add(post)
+    val resultId1 = WallService.add(post)
+    val resultId2 = WallService.add(post)
+    val resultId3 = WallService.add(post)
+    println(resultId1)
+    println(resultId2)
+    println(resultId3)
 
     val result = WallService.update(post1)
     println(result)
