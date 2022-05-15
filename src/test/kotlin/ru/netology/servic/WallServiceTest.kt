@@ -19,6 +19,7 @@ class WallServiceTest {
             views = Views()
         )
         WallService.add(post)
+        WallService.clear()
         val expected = Post(
             id = 1,
             comments = Comments(),

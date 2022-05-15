@@ -5,6 +5,10 @@ import ru.netology.data.Post
 object WallService {
     private var posts = emptyArray<Post>()
 
+    fun clear() {
+        posts = emptyArray<Post>()
+    }
+
     fun add(post: Post): Post {
         val postId = post.copy(id = if (posts.isEmpty()) 1 else posts.last().id + 1)
         posts += postId
